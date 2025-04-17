@@ -1,3 +1,9 @@
+"use client";
+
+import { DotLottiePlayer } from "@dotlottie/react-player";
+import Image from "next/image";
+import productImage from "@/assets/product-image.png";
+
 const tabs = [
   {
     icon: "/assets/lottie/vroom.lottie",
@@ -26,5 +32,34 @@ const tabs = [
 ];
 
 export const Features = () => {
-  return <section>Features</section>;
+  return (
+    <section className="py-20">
+      <div className="container">
+        <h2 className="text-5xl font-medium text-center tracking-tighter">
+          Elevate your SEO efforts.
+        </h2>
+        <p className="text-white/70 text-lg tracking-tight text-center mt-5">
+          From small startups to large enterprises, our AI-driven tool has
+          revolutionized the way businesses approach SEO.
+        </p>
+        <div className="mt-10">
+          {tabs.map((tab) => (
+            <div
+              key={tab.title}
+              className="border border-white/15 flex p-2.5 rounded-xl gap-2.5 items-center"
+            >
+              <div className="h-12 w-12 border border-white/15 rounded-lg inline-flex items-center justify-center">
+                <DotLottiePlayer src={tab.icon} className="h-5 w-5" autoplay />
+              </div>
+              <div className="font-medium">{tab.title}</div>
+              {tab.isNew && (
+                <div className="text-sm rounded-full px-2 pt-0.5">new</div>
+              )}
+            </div>
+          ))}
+        </div>
+        <Image src={productImage} alt="Product image" />
+      </div>
+    </section>
+  );
 };
