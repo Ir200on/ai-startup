@@ -1,5 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  
+  output: 'export',
+  basePath: '/ai-startup', // Your repository name
+  images: {
+    unoptimized: true, // GitHub Pages doesn't support Next.js Image optimization
+  },
+  trailingSlash: true,
+
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
