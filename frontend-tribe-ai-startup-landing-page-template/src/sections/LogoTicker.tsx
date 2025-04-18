@@ -1,3 +1,4 @@
+import Image from "next/image";
 import acmeLogo from "@/assets/logo-acme.png";
 import apexLogo from "@/assets/logo-apex.png";
 import celestialLogo from "@/assets/logo-celestial.png";
@@ -23,11 +24,13 @@ export const LogoTicker = () => {
                 apexLogo,
                 quantumLogo,
               ].map((logo) => (
-                <img
-                  src={logo.src}
+                <Image
+                  src={logo}
                   key={logo.src}
-                  alt="map logo"
+                  alt="Company logo"
                   className="h-6 w-auto"
+                  width={logo.width || 100}
+                  height={logo.height || 24}
                 />
               ))}
             </div>
