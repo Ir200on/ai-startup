@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/ai-startup', // Your repository name
+  basePath: '/ai-startup',
+  assetPrefix: '/ai-startup/',
   images: {
-    unoptimized: true, // GitHub Pages doesn't support Next.js Image optimization
+    unoptimized: true,
   },
   trailingSlash: true,
 
