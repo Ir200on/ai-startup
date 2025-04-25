@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/ai-startup',
-  assetPrefix: '/ai-startup/',
+  // basePath: '/ai-startup',
+  basePath: '/frontend-tribe-ai-startup-landing-page-template',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/ai-startup/' : '',
   images: {
     unoptimized: true,
   },
