@@ -1,12 +1,21 @@
 "use client";
 
 import { DotLottiePlayer } from "@dotlottie/react-player";
+// import { Lottie } from "@lottiefiles/react-lottie-player";
 import Image from "next/image";
+
+// import productImage from "../public/assets/product-image.png";
+
+// import vroomLottie from "../public/assets/lottie/vroom_lottie.json";
+// import clickLottie from "../public/assets/lottie/click_lottie.json";
+// import starsLottie from "../public/assets/lottie/stars_lottie.json";
+
 import productImage from "@/assets/product-image.png";
 
 const tabs = [
   {
     icon: "/assets/lottie/vroom.lottie",
+    // icon: vroomLottie, // Використовуємо імпортований JSON
     title: "User-friendly dashboard",
     isNew: false,
     backgroundPositionX: 0,
@@ -15,6 +24,7 @@ const tabs = [
   },
   {
     icon: "/assets/lottie/click.lottie",
+    // icon: clickLottie,
     title: "One-click optimization",
     isNew: false,
     backgroundPositionX: 98,
@@ -23,6 +33,7 @@ const tabs = [
   },
   {
     icon: "/assets/lottie/stars.lottie",
+    // icon: starsLottie,
     title: "Smart keyword generator",
     isNew: true,
     backgroundPositionX: 100,
@@ -50,6 +61,11 @@ export const Features = () => {
             >
               <div className="h-12 w-12 border border-white/15 rounded-lg inline-flex items-center justify-center">
                 <DotLottiePlayer src={tab.icon} className="h-5 w-5" autoplay />
+                {/* <DotLottiePlayer
+                  animationData={tab.icon} // Використовуємо animationData замість src
+                  className="h-5 w-5"
+                  autoplay
+                /> */}
               </div>
               <div className="font-medium">{tab.title}</div>
               {tab.isNew && (

@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out",
+    "deploy": "gh-pages -d out --nojekyll",
     "dev": "next dev",
     "build": "next build",
     "serve": "npx serve out",
@@ -15,6 +15,7 @@
   "dependencies": {
     "@dotlottie/react-player": "^1.6.19",
     "@lottiefiles/dotlottie-react": "^0.7.2",
+    "@lottiefiles/react-lottie-player": "^3.6.0",
     "framer-motion": "^11.3.2",
     "lottie-react": "^2.4.1",
     "next": "14.2.5",
