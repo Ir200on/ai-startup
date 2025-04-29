@@ -1,20 +1,17 @@
 "use client";
 
+import PRODUCT_IMAGE from "@assets/product-image.png";
+
+const basePath = process.env.NODE_ENV === "production" ? "/ai-startup" : "";
+
 import { DotLottiePlayer } from "@dotlottie/react-player";
-// import { Lottie } from "@lottiefiles/react-lottie-player";
 import Image from "next/image";
-
-// import productImage from "../public/assets/product-image.png";
-
-// import vroomLottie from "../public/assets/lottie/vroom_lottie.json";
-// import clickLottie from "../public/assets/lottie/click_lottie.json";
-// import starsLottie from "../public/assets/lottie/stars_lottie.json";
 
 import productImage from "@/assets/product-image.png";
 
 const tabs = [
   {
-    icon: `/assets/lottie/vroom.lottie.`,
+    icon: `${basePath}/assets/lottie/vroom_lottie.json`,
     // icon: vroomLottie, // Використовуємо імпортований JSON
     title: "User-friendly dashboard",
     isNew: false,
@@ -23,7 +20,7 @@ const tabs = [
     backgroundSizeX: 150,
   },
   {
-    icon: "/assets/lottie/click.lottie",
+    icon: `${basePath}/assets/lottie/click_lottie.json`,
     // icon: clickLottie,
     title: "One-click optimization",
     isNew: false,
@@ -32,7 +29,7 @@ const tabs = [
     backgroundSizeX: 135,
   },
   {
-    icon: "/assets/lottie/stars.lottie",
+    icon: `${basePath}/assets/lottie/stars_lottie.json`,
     // icon: starsLottie,
     title: "Smart keyword generator",
     isNew: true,
