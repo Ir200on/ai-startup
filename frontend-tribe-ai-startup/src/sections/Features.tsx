@@ -14,7 +14,7 @@ import productImage from "@/assets/product-image.png";
 
 const tabs = [
   {
-    icon: "/assets/lottie/vroom.lottie",
+    icon: `/assets/lottie/vroom.lottie.`,
     // icon: vroomLottie, // Використовуємо імпортований JSON
     title: "User-friendly dashboard",
     isNew: false,

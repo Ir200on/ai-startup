@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: "/ai-startup", // Явно задаємо basePath
-  assetPrefix: "/ai-startup/", // Явно задаємо assetPrefix
+  basePath: "", // Прибираємо basePath
+  assetPrefix: "", // Прибираємо assetPrefix
   images: {
     unoptimized: true,
   },
