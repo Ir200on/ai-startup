@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out --nojekyll",
+    "deploy": "gh-pages -d out/ai-startup --nojekyll",
     "dev": "next dev",
     "build": "cross-env NODE_ENV=production next build && node move-files.js",
     "serve": "npx serve out",
